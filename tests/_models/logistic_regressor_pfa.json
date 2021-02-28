@@ -1,0 +1,142 @@
+{
+    "input": {
+        "type": "record",
+        "name": "LogisticRegressorInput",
+        "fields": [
+            {
+                "name": "sepal_length_cm",
+                "type": "double"
+            },
+            {
+                "name": "sepal_width_cm",
+                "type": "double"
+            },
+            {
+                "name": "petal_length_cm",
+                "type": "double"
+            },
+            {
+                "name": "petal_width_cm",
+                "type": "double"
+            }
+        ]
+    },
+    "output": "int",
+    "action": {
+        "a.argmax": {
+            "m.link.logit": {
+                "la.add": [
+                    {
+                        "la.dot": [
+                            {
+                                "type": {
+                                    "items": {
+                                        "items": "double",
+                                        "type": "array"
+                                    },
+                                    "type": "array"
+                                },
+                                "new": [
+                                    {
+                                        "type": {
+                                            "items": "double",
+                                            "type": "array"
+                                        },
+                                        "new": [
+                                            -0.16843492248479547,
+                                            0.10728376589215727,
+                                            -0.5197372251132764,
+                                            -0.21437011469870643
+                                        ]
+                                    },
+                                    {
+                                        "type": {
+                                            "items": "double",
+                                            "type": "array"
+                                        },
+                                        "new": [
+                                            -0.004511192625263856,
+                                            -0.12244147673188246,
+                                            0.11773808661456615,
+                                            0.008825573398269174
+                                        ]
+                                    },
+                                    {
+                                        "type": {
+                                            "items": "double",
+                                            "type": "array"
+                                        },
+                                        "new": [
+                                            0.16065305409039876,
+                                            -0.0010623348992278398,
+                                            0.40911725580180464,
+                                            0.20804580711069662
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": {
+                                    "items": {
+                                        "items": "double",
+                                        "type": "array"
+                                    },
+                                    "type": "array"
+                                },
+                                "new": [
+                                    {
+                                        "type": {
+                                            "items": "double",
+                                            "type": "array"
+                                        },
+                                        "new": [
+                                            "input.sepal_length_cm"
+                                        ]
+                                    },
+                                    {
+                                        "type": {
+                                            "items": "double",
+                                            "type": "array"
+                                        },
+                                        "new": [
+                                            "input.sepal_width_cm"
+                                        ]
+                                    },
+                                    {
+                                        "type": {
+                                            "items": "double",
+                                            "type": "array"
+                                        },
+                                        "new": [
+                                            "input.petal_length_cm"
+                                        ]
+                                    },
+                                    {
+                                        "type": {
+                                            "items": "double",
+                                            "type": "array"
+                                        },
+                                        "new": [
+                                            "input.petal_width_cm"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": {
+                            "items": "double",
+                            "type": "array"
+                        },
+                        "new": [
+                            1.9601867317049013,
+                            -0.7557086551022241,
+                            -3.583730767079406
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

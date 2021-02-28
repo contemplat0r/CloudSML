@@ -1,0 +1,438 @@
+{
+    "action": {
+        "a.argmax": {
+            "new": [
+                {
+                    "a.sum": {
+                        "new": [
+                            0.3333333333333333,
+                            {
+                                "else": {
+                                    "double": -1.0000000000000002
+                                },
+                                "if": {
+                                    "<=": [
+                                        "input.petal_length_cm",
+                                        2.450000047683716
+                                    ]
+                                },
+                                "then": {
+                                    "double": 2.0
+                                }
+                            },
+                            {
+                                "else": {
+                                    "double": -0.9950169398906755
+                                },
+                                "if": {
+                                    "<=": [
+                                        "input.petal_width_cm",
+                                        0.800000011920929
+                                    ]
+                                },
+                                "then": {
+                                    "double": 1.9606265902736806
+                                }
+                            }
+                        ],
+                        "type": {
+                            "items": "double",
+                            "type": "array"
+                        }
+                    }
+                },
+                {
+                    "a.sum": {
+                        "new": [
+                            0.3333333333333333,
+                            {
+                                "else": {
+                                    "else": {
+                                        "else": {
+                                            "double": -1.0016666527779168
+                                        },
+                                        "if": {
+                                            "<=": [
+                                                "input.petal_length_cm",
+                                                4.850000381469727
+                                            ]
+                                        },
+                                        "then": {
+                                            "else": {
+                                                "double": 1.9933665558327787
+                                            },
+                                            "if": {
+                                                "<=": [
+                                                    "input.sepal_width_cm",
+                                                    3.0999999046325684
+                                                ]
+                                            },
+                                            "then": {
+                                                "double": -1.0016666527779166
+                                            }
+                                        }
+                                    },
+                                    "if": {
+                                        "<=": [
+                                            "input.petal_width_cm",
+                                            1.75
+                                        ]
+                                    },
+                                    "then": {
+                                        "else": {
+                                            "else": {
+                                                "else": {
+                                                    "double": -1.0016666527779166
+                                                },
+                                                "if": {
+                                                    "<=": [
+                                                        "input.sepal_length_cm",
+                                                        6.949999809265137
+                                                    ]
+                                                },
+                                                "then": {
+                                                    "double": 1.9933665558327787
+                                                }
+                                            },
+                                            "if": {
+                                                "<=": [
+                                                    "input.petal_width_cm",
+                                                    1.5499999523162842
+                                                ]
+                                            },
+                                            "then": {
+                                                "double": -1.0016666527779166
+                                            }
+                                        },
+                                        "if": {
+                                            "<=": [
+                                                "input.petal_length_cm",
+                                                4.949999809265137
+                                            ]
+                                        },
+                                        "then": {
+                                            "else": {
+                                                "double": -1.0016666527779166
+                                            },
+                                            "if": {
+                                                "<=": [
+                                                    "input.petal_width_cm",
+                                                    1.6500000953674316
+                                                ]
+                                            },
+                                            "then": {
+                                                "double": 1.9933665558327789
+                                            }
+                                        }
+                                    }
+                                },
+                                "if": {
+                                    "<=": [
+                                        "input.petal_length_cm",
+                                        2.450000047683716
+                                    ]
+                                },
+                                "then": {
+                                    "double": -0.9966667777733337
+                                }
+                            },
+                            {
+                                "else": {
+                                    "else": {
+                                        "else": {
+                                            "double": -0.9966260720639163
+                                        },
+                                        "if": {
+                                            "<=": [
+                                                "input.petal_length_cm",
+                                                4.850000381469727
+                                            ]
+                                        },
+                                        "then": {
+                                            "else": {
+                                                "double": 1.9542849027344804
+                                            },
+                                            "if": {
+                                                "<=": [
+                                                    "input.sepal_width_cm",
+                                                    3.0999999046325684
+                                                ]
+                                            },
+                                            "then": {
+                                                "double": -0.9966260720639164
+                                            }
+                                        }
+                                    },
+                                    "if": {
+                                        "<=": [
+                                            "input.petal_width_cm",
+                                            1.75
+                                        ]
+                                    },
+                                    "then": {
+                                        "else": {
+                                            "else": {
+                                                "else": {
+                                                    "double": -0.9966260720639164
+                                                },
+                                                "if": {
+                                                    "<=": [
+                                                        "input.petal_length_cm",
+                                                        5.449999809265137
+                                                    ]
+                                                },
+                                                "then": {
+                                                    "double": 1.9542849027344804
+                                                }
+                                            },
+                                            "if": {
+                                                "<=": [
+                                                    "input.petal_width_cm",
+                                                    1.5499999523162842
+                                                ]
+                                            },
+                                            "then": {
+                                                "double": -0.9966260720639165
+                                            }
+                                        },
+                                        "if": {
+                                            "<=": [
+                                                "input.petal_length_cm",
+                                                4.949999809265137
+                                            ]
+                                        },
+                                        "then": {
+                                            "else": {
+                                                "double": -0.9966260720639164
+                                            },
+                                            "if": {
+                                                "<=": [
+                                                    "input.petal_width_cm",
+                                                    1.6500000953674316
+                                                ]
+                                            },
+                                            "then": {
+                                                "double": 1.9542849581256971
+                                            }
+                                        }
+                                    }
+                                },
+                                "if": {
+                                    "<=": [
+                                        "input.petal_length_cm",
+                                        2.450000047683716
+                                    ]
+                                },
+                                "then": {
+                                    "double": -0.9917421291887715
+                                }
+                            }
+                        ],
+                        "type": {
+                            "items": "double",
+                            "type": "array"
+                        }
+                    }
+                },
+                {
+                    "a.sum": {
+                        "new": [
+                            0.3333333333333333,
+                            {
+                                "else": {
+                                    "else": {
+                                        "double": 1.9867221112951883
+                                    },
+                                    "if": {
+                                        "<=": [
+                                            "input.petal_length_cm",
+                                            4.850000381469727
+                                        ]
+                                    },
+                                    "then": {
+                                        "else": {
+                                            "double": 1.9867221112951878
+                                        },
+                                        "if": {
+                                            "<=": [
+                                                "input.sepal_length_cm",
+                                                5.949999809265137
+                                            ]
+                                        },
+                                        "then": {
+                                            "double": -0.9983113479397291
+                                        }
+                                    }
+                                },
+                                "if": {
+                                    "<=": [
+                                        "input.petal_width_cm",
+                                        1.75
+                                    ]
+                                },
+                                "then": {
+                                    "else": {
+                                        "else": {
+                                            "else": {
+                                                "double": 1.9867221112951878
+                                            },
+                                            "if": {
+                                                "<=": [
+                                                    "input.sepal_length_cm",
+                                                    6.949999809265137
+                                                ]
+                                            },
+                                            "then": {
+                                                "double": -0.9983113479397291
+                                            }
+                                        },
+                                        "if": {
+                                            "<=": [
+                                                "input.petal_width_cm",
+                                                1.5499999523162842
+                                            ]
+                                        },
+                                        "then": {
+                                            "double": 1.9867221112951878
+                                        }
+                                    },
+                                    "if": {
+                                        "<=": [
+                                            "input.petal_length_cm",
+                                            4.949999809265137
+                                        ]
+                                    },
+                                    "then": {
+                                        "else": {
+                                            "double": 1.9867221112951878
+                                        },
+                                        "if": {
+                                            "<=": [
+                                                "input.petal_width_cm",
+                                                1.6500000953674316
+                                            ]
+                                        },
+                                        "then": {
+                                            "double": -0.9983027869327913
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "else": {
+                                    "else": {
+                                        "double": 1.9479322201683682
+                                    },
+                                    "if": {
+                                        "<=": [
+                                            "input.petal_length_cm",
+                                            4.850000381469727
+                                        ]
+                                    },
+                                    "then": {
+                                        "else": {
+                                            "double": 1.9479322201683678
+                                        },
+                                        "if": {
+                                            "<=": [
+                                                "input.sepal_length_cm",
+                                                5.949999809265137
+                                            ]
+                                        },
+                                        "then": {
+                                            "double": -0.9933382480180679
+                                        }
+                                    }
+                                },
+                                "if": {
+                                    "<=": [
+                                        "input.petal_width_cm",
+                                        1.75
+                                    ]
+                                },
+                                "then": {
+                                    "else": {
+                                        "else": {
+                                            "else": {
+                                                "double": 1.9479322201683678
+                                            },
+                                            "if": {
+                                                "<=": [
+                                                    "input.petal_length_cm",
+                                                    5.449999809265137
+                                                ]
+                                            },
+                                            "then": {
+                                                "double": -0.9933382480180679
+                                            }
+                                        },
+                                        "if": {
+                                            "<=": [
+                                                "input.petal_width_cm",
+                                                1.5499999523162842
+                                            ]
+                                        },
+                                        "then": {
+                                            "double": 1.9479322201683678
+                                        }
+                                    },
+                                    "if": {
+                                        "<=": [
+                                            "input.petal_length_cm",
+                                            4.949999809265137
+                                        ]
+                                    },
+                                    "then": {
+                                        "else": {
+                                            "double": 1.9479322201683678
+                                        },
+                                        "if": {
+                                            "<=": [
+                                                "input.petal_width_cm",
+                                                1.6500000953674316
+                                            ]
+                                        },
+                                        "then": {
+                                            "double": -0.9933216299189165
+                                        }
+                                    }
+                                }
+                            }
+                        ],
+                        "type": {
+                            "items": "double",
+                            "type": "array"
+                        }
+                    }
+                }
+            ],
+            "type": {
+                "items": "double",
+                "type": "array"
+            }
+        }
+    },
+    "input": {
+        "fields": [
+            {
+                "name": "sepal_length_cm",
+                "type": "double"
+            },
+            {
+                "name": "sepal_width_cm",
+                "type": "double"
+            },
+            {
+                "name": "petal_length_cm",
+                "type": "double"
+            },
+            {
+                "name": "petal_width_cm",
+                "type": "double"
+            }
+        ],
+        "name": "GBMClassifierInput",
+        "type": "record"
+    },
+    "output": "double"
+}

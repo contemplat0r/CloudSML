@@ -1,0 +1,112 @@
+{
+    "input": {
+        "type": "record",
+        "name": "LogisticRegressorInput",
+        "fields": [
+            {
+                "name": "CRIM",
+                "type": "double"
+            },
+            {
+                "name": "ZN",
+                "type": "double"
+            },
+            {
+                "name": "INDUS",
+                "type": "double"
+            },
+            {
+                "name": "CHAS",
+                "type": "double"
+            },
+            {
+                "name": "NOX",
+                "type": "double"
+            },
+            {
+                "name": "RM",
+                "type": "double"
+            },
+            {
+                "name": "AGE",
+                "type": "double"
+            },
+            {
+                "name": "DIS",
+                "type": "double"
+            },
+            {
+                "name": "RAD",
+                "type": "double"
+            },
+            {
+                "name": "TAX",
+                "type": "double"
+            },
+            {
+                "name": "PT",
+                "type": "double"
+            },
+            {
+                "name": "B",
+                "type": "double"
+            },
+            {
+                "name": "LSTAT",
+                "type": "double"
+            }
+        ]
+    },
+    "output": "double",
+    "action": {
+        "+": [
+            {
+                "m.kernel.linear": [
+                    {
+                        "type": {
+                            "type": "array",
+                            "items": "double"
+                        },
+                        "new": [
+                            -0.10801175236701965,
+                            0.04642081260681152,
+                            0.020559918135404587,
+                            2.6867754459381104,
+                            -17.766708374023438,
+                            3.8098554611206055,
+                            0.0006928085349500179,
+                            -1.475568413734436,
+                            0.30605000257492065,
+                            -0.012334734201431274,
+                            -0.9527471661567688,
+                            0.009311433881521225,
+                            -0.5247586965560913
+                        ]
+                    },
+                    {
+                        "type": {
+                            "type": "array",
+                            "items": "double"
+                        },
+                        "new": [
+                            "input.CRIM",
+                            "input.ZN",
+                            "input.INDUS",
+                            "input.CHAS",
+                            "input.NOX",
+                            "input.RM",
+                            "input.AGE",
+                            "input.DIS",
+                            "input.RAD",
+                            "input.TAX",
+                            "input.PT",
+                            "input.B",
+                            "input.LSTAT"
+                        ]
+                    }
+                ]
+            },
+            36.45969558014071
+        ]
+    }
+}

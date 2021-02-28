@@ -1,0 +1,171 @@
+{
+    "input": {
+        "type": "record",
+        "name": "GBMRegressorInput",
+        "fields": [
+            {
+                "name": "CRIM",
+                "type": "double"
+            },
+            {
+                "name": "ZN",
+                "type": "double"
+            },
+            {
+                "name": "INDUS",
+                "type": "double"
+            },
+            {
+                "name": "CHAS",
+                "type": "double"
+            },
+            {
+                "name": "NOX",
+                "type": "double"
+            },
+            {
+                "name": "RM",
+                "type": "double"
+            },
+            {
+                "name": "AGE",
+                "type": "double"
+            },
+            {
+                "name": "DIS",
+                "type": "double"
+            },
+            {
+                "name": "RAD",
+                "type": "double"
+            },
+            {
+                "name": "TAX",
+                "type": "double"
+            },
+            {
+                "name": "PT",
+                "type": "double"
+            },
+            {
+                "name": "B",
+                "type": "double"
+            },
+            {
+                "name": "LSTAT",
+                "type": "double"
+            }
+        ]
+    },
+    "output": "double",
+    "action": {
+        "+": [
+            {
+                "+": [
+                    22.532806324110677,
+                    {
+                        "*": [
+                            2.0,
+                            {
+                                "*": [
+                                    0.01,
+                                    {
+                                        "if": {
+                                            "<=": [
+                                                "input.RM",
+                                                6.940999984741211
+                                            ]
+                                        },
+                                        "then": {
+                                            "if": {
+                                                "<=": [
+                                                    "input.DIS",
+                                                    1.384850025177002
+                                                ]
+                                            },
+                                            "then": {
+                                                "double": -2.37566346696782
+                                            },
+                                            "else":{
+                                                "double": -4.97566646696782
+                                            }
+                                        },
+                                        "else": {
+                                            "double": -11.307806324110677
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "*": [
+                    0.01,
+                    {
+                        "a.sum": {
+                            "type": {
+                                "type": "array",
+                                "items": "double"
+                            },
+                            "new": [
+                                {
+                                    "if": {
+                                        "<=": [
+                                            "input.TAX",
+                                            222.5
+                                        ]
+                                    },
+                                    "then": {
+                                        "if": {
+                                            "<=": [
+                                                "input.LSTAT",
+                                                14.399999618530273
+                                            ]
+                                        },
+                                        "then": {
+                                            "double": -2.3519068322981425
+                                        },
+                                        "else": {
+                                            "double": 27.19252173913043
+                                        }
+                                    },
+                                    "else": {
+                                        "double": 5.207782656521733
+                                    }
+                                },
+                                {
+                                    "if": {
+                                        "<=": [
+                                            "input.RM",
+                                            6.940999984741211
+                                        ]
+                                    },
+                                    "then": {
+                                        "if": {
+                                            "<=": [
+                                                "input.LSTAT",
+                                                14.399999618530273
+                                            ]
+                                        },
+                                        "then": {
+                                            "double": 6.566201256521737
+                                        },
+                                        "else": {
+                                            "double": 18.20978925652173
+                                        }
+                                    },
+                                    "else": {
+                                        "double": 18.20978925652173
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
+
